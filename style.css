@@ -521,3 +521,24 @@ html[data-theme="dark"] .brief select{background-image:url("data:image/svg+xml,%
 
 /* Desktop greeting shares the content gutter, with a little breathing room. */
 @media(min-width:701px){.hero .intro-character{right:24px}}
+
+/* Everybody Eats: original transparent wordmark, adapted for the dark footer. */
+footer #collaborations .everybody-wordmark img{width:90px;max-height:38px;filter:none}
+html[data-theme="dark"] footer #collaborations .everybody-wordmark img{filter:brightness(0) invert(.93)}
+@media(max-width:700px){footer #collaborations .brand-strip{gap:10px}footer #collaborations .everybody-wordmark img{width:100%;max-width:90px}}
+
+/* Five evenly spaced collaboration marks with optical sizing. */
+footer #collaborations .brand-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:28px;align-items:center;width:min(640px,100%);flex:none}
+footer #collaborations .brand-strip :is(a,.brand-mark){width:100%!important;min-width:0;height:46px;justify-content:center;margin:0}
+footer #collaborations .brand-strip img{max-width:100%;max-height:38px;object-fit:contain;margin:0}
+footer #collaborations .brand-strip .twisted-wordmark img{width:40px;height:40px;max-height:40px}
+footer #collaborations .brand-strip .everybody-wordmark img{width:90px;max-width:100%}
+@media(max-width:700px){
+ footer #collaborations{gap:16px}
+ footer #collaborations .brand-strip{width:100%;gap:12px}
+ footer #collaborations .brand-strip :is(a,.brand-mark){height:38px}
+ footer #collaborations .brand-strip img{width:auto;max-width:100%;max-height:29px}
+ footer #collaborations .brand-strip .belly-wordmark img{width:100%;max-width:65px;max-height:29px}
+ footer #collaborations .brand-strip .twisted-wordmark img{width:28px;height:28px;max-height:28px}
+ footer #collaborations .brand-strip .everybody-wordmark img{width:100%;max-height:29px}
+}
